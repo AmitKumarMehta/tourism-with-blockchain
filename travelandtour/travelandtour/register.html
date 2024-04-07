@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background:url(https://wallpapercave.com/wp/wp4976475.jpg);
+           
+            background-position: center;background-repeat:no-repeat;
+            
+            background-size:cover;
+            place-content: center;
+            display: grid;
+            
+            font-family:Arial,sans-serif;
+        }
+        div.main{
+            width:400px;
+            margin:100px auto 0px auto;
+
+        }
+        h1{
+            
+            padding: 20px;
+            text-align: center;
+            color:rgb(247, 242, 242);
+            
+        }
+        div .register{
+            position: center;
+               width: 550px;
+             height: 550px;
+             background-color:rgba(0,0,0,0.7);
+             box-shadow: transparent;
+             border-radius: 13px;
+             overflow: hidden;
+        }
+        
+        form #register{
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 50px;
+        }
+        label{
+            
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align:center;
+            color:#fff
+        }
+        input #name{
+            width: 300px;
+            border:ipx solid #634d4d;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-color: #423c3c;
+            box-shadow: inset 1px 1px 1px 5px regba(0,0,0,0.3);
+
+        }
+        button{
+            margin-left: 250px;
+            align-items: center;
+        }
+        select{
+            margin-left: 250px;
+            align-items: center;
+        }
+        #city{
+            margin: 25px;
+            margin-top: 0px;
+            width: 150px;
+            height: 25px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="register">
+    <h1>Welcome to Registration page</h1>
+    <form id="register" method="post">
+        
+        <label >Name:   <input type="text" name="Name" placeholder="Enter your name"></label><br>
+        <label >Age:    <input type="number" name="age" placeholder="Enter your age"></label><br>
+        <label >Gender: <input type="text" name="gender" placeholder="Enter your gender"></label><br>
+        <label >Email:  <input type="email" name="email" placeholder="Enter your Emai-Id"></label><br>
+        <label> Select City: <select name="city" id="city" >
+            <option value="enter details">Enter city</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Jodhpur">Jodhpur</option>
+            <option value="Bikaner">Bikaner</option>
+            <option value="Alwar">Alwar</option>
+            <option value="Sawai">Sawai</option>
+            <option value="Pushkar">Pushkar</option>
+            <option value="Jaisalmer">Jaisalmer</option>
+            <option value="Mount Go">Mount Go</option>
+            <option value="Bharatpur">Bharatpur</option>
+            <option value="Ajmer">Ajmer</option>
+            <option value="Chittorgarh">ChittorGarh</option>
+            <option value="Udaipur">Udaipur</option>
+        </select></label>
+        <label> Select Hotel: <select name="city" id="city" >
+            <option value="enter details">Enter Hotel</option>
+            <option value="Lords Inn Jodhpur">Lords Inn Jodhpur</option>
+            <option value="Golden Dreams Guest House">Golden Dreams Guest House</option>
+            <option value="THC Backpackers Jodhpur">THC Backpackers Jodhpur</option>
+            <option value="Kanha Inn">Kanha Inn</option>
+        </select></label>
+        <label >Aadhar Number: <input type="number" name="adhar" placeholder="Enter your Aadhar Number"></label><br>
+        <label >Contact Number: <input type="number" name="contact" placeholder="Enter your Contact Number"></label><br>
+        <label >Nationality: <input type="text" name="nation" placeholder="Enter your Nationality"></label><br>
+        <button>submit</button>
+        
+    </form>
+</div>
+</div>
+</body>
+</html>

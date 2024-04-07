@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>search in javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: wheat;
+        }
+
+        .container-fluid {
+            width: 100%;
+            height: auto;
+            padding: 0px 0px 80px 0px;
+        }
+
+        .container {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+        }
+
+        .container .search {
+            display: flex;
+            padding: 30px 0px;
+            justify-content: space-between;
+        }
+
+        .container .search h1 {
+            letter-spacing: 3px;
+            display: inline-block;
+            border-bottom: 2px solid green;
+            padding-bottom: 10px;
+        }
+
+        .container .search input {
+            width: 60%;
+            padding: 5px 16px;
+            background: transparent;
+            border: 1px solid #000;
+            font-size: 20px;
+            text-transform: capitalize;
+            letter-spacing: 3px;
+            outline: none;
+        }
+
+        .container .search input::placeholder {
+            color: green;
+            font-weight: 500;
+        }
+
+        .container .product-list {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: left;
+            display: flex;
+        }
+
+        .container .product-list .product {
+            margin-top: 0px;
+
+        }
+
+        img {
+
+            height: 270px;
+            width: 287px;
+        }
+
+        .container .product-list .product h3 {
+            padding-top: 5px;
+            letter-spacing: 2px;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .container .product-list .product h4 {
+            padding: 3px 0px;
+            color: #48a809;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        #log {
+            color: white;
+            margin: 50px;
+            display: block;
+            justify-content: flex-end;
+            text-align: end;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="search">
+                <h1>All Places</h1>
+                <!-- <a href="log.php" id="log">Sign in / Sign up</a> -->
+                <input type="text" name="" id="find" placeholder="search here...." onkeyup="search()">
+                
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <a href="jaipur.html"><img
+                            src="https://images.unsplash.com/photo-1504705759706-c5ee7158f8bb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGphaXB1cnxlbnwwfHwwfHx8MA%3D%3D"></a>
+                    <h3>Jaipur</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="udaipur.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/udaipur1.jpg"></a>
+                    <h3>Udaipur</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="jodhpur.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/jodhpur1.jpg"></a>
+                    <h3>Jodhpur</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="jaisalmer.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/jaisalmer1.jpg"></a>
+                    <h3>Jaisalmer</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="Bikaner.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/bikaner1.jpg"></a>
+                    <h3>Bikaner</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="pushkar.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/pushkar1.jpg"></a>
+                    <h3>Pushkar</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="Sawai.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/sawal.jpg"></a>
+                    <h3>Sawai Madhopur</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="Chittor.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/chittor.jpg"></a>
+                    <h3>Chittorgarh</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="Mount.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/mt-abu.jpg"></a>
+                    <h3>Mount Abu</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="bharatpur.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/bharatpur1.jpg"></a>
+                    <h3>Bharatpur</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <img src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/ajmer1.jpg">
+                    <h3>Ajmer</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+                <div class="product">
+                    <a href="Alwar.html"><img
+                            src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/alwar1.jpg"></a>
+                    <h3>Alwar</h3>
+                    <!-- <h4>$100.00 - <del>$120.00</del></h4> -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script type="text/javascript">
+        function search() {
+            let filter = document.getElementById('find').value.toUpperCase();
+            let item = document.querySelectorAll('.product');
+            let l = document.getElementsByTagName('h3');
+            for (var i = 0; i <= l.length; i++) {
+                let a = item[i].getElementsByTagName('h3')[0];
+                let value = a.innerHTML || a.innerText || a.textContent;
+                if (value.toUpperCase().indexOf(filter) > -1) {
+                    item[i].style.display = "";
+                }
+                else {
+                    item[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

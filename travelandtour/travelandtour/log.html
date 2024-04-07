@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in || Sign up from</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --linear-grad: linear-gradient(to right, #f3c188, #f5ba62);
+    --grad-clr1: #f7c374;
+    --grad-clr2: #fac687;
+}
+
+body {
+    height: 100vh;
+    width:100%;
+    background: #f4efef;
+    background-color:transparent;
+    background-image: url(https://png.pngtree.com/back_origin_pic/04/56/10/6073b779bb9da354082a7af1d25985e0.jpg) ;
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 850px;
+    height: 500px;
+    background-color:rgba(0,0,0,0.7);
+    box-shadow: transparent;
+    border-radius: 13px;
+    overflow: hidden;
+
+}
+.form-container{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    padding: 0px 40px;
+    transition: all 0.6s ease-in-out;
+
+
+}
+.sign-up-container{
+    opacity: 0;
+    z-index: 1;
+}
+.sign-in-container{
+    z-index: 2;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+
+}
+h1{
+    color: var(--grad-clr1);
+}
+.social-container{
+    margin:20px 0px;
+}
+.social-container a{
+    border: 5px solid #f2f1f4;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    height: 30px;
+    width: 30px;
+}
+span {
+    font-size: 12px;
+    color:#f5ba62
+}
+.infield{
+    max-width: 380px;
+        width: 100%;
+        background-color: wheat;
+        margin: 10px 0;
+        height: 55px;
+        border-radius: 55px;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        padding: 0 0.4rem;
+        position: relative;
+}
+.infield i {
+        text-align: center;
+        line-height: 55px;
+        color: #862929;
+        transition: 0.5s;
+        font-size: 1.1rem;
+}
+.infield input {
+        background: none;
+        outline: none;
+        border: none;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #890e0e;
+}
+.infield input::placeholder {
+        color: #101010;
+        font-weight: 500;
+     }
+label{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform:translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: var(--linear-grad);
+    transition: 0.3s;
+}
+input:focus~label{
+    width: 100%;
+}
+a{
+    color: #f6973d;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0px;
+}
+a.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #070000;
+}
+button{
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #090909;
+    font-size: 12px;
+    font-weight: bold;
+    padding:12px 45px ;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.form-container button{
+    margin-top: 17px;
+    transition: 80ms ease-in;
+
+}
+.form-container button:hover{
+    background: #faf6f6;
+    color: var(--grad-clr1);
+}
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    z-index: 9;
+}
+
+#overlayBtn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 338px;
+    transform: translateX(-50%);
+    width: 143.67;
+    height: 40px;
+    border: 1px solid #780a6d;
+    background: transparent;
+    border-radius: 20px;
+}
+.overlay{
+    position: relative;
+    background: var(--linear-grad);
+    color: #0a0a0a;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+}
+.overlay-left{
+    right: 60%;
+    transform: translateX(-12%);
+   
+}
+.overlay-right{
+    right: 0;
+    transform: translateX(10%);
+}
+.overlay-panel h1{
+    color: #d41772;
+}
+p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin:25px 0px 35px;
+}
+.overlay-panel button{
+    border: none;
+    background-color: transparent;
+}
+.right-panel-active .overlay-container{
+    transform: translateX(-150%);
+}
+.right-panel-active .overlay{
+    transform: translateX(50%);
+}
+.right-panel-active .overlay-left{
+    transform: translateX(30%);
+}
+.right-panel-active .overlay-right{
+    transform: translateX(30%);
+}
+.right-panel-active .sign-in-container{
+    transform: translateX(20%);
+    opacity: 0;
+}
+.right-panel-active .sign-up-container{
+    transform: translateX(66.7%);
+    opacity:1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+@keyframes show{
+    0%,50%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%,100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.btnscaled{
+    animation: scaleBtn 0.6s;
+}
+@keyframes scaleBtn{
+    0%{
+        width: 143.67px;
+    }
+    50%{
+        width:250px ;
+    }
+    100%{
+        width:143.67px;
+    }
+}
+
+
+
+   </style>
+</head>
+<body>
+<div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <!-- <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    
+                </div> -->
+                <!-- <span>or use your email for registration</span> -->
+                <div class="infield">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name" />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="index.html">
+                <h1>Sign in</h1>
+                <!-- <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    
+                </div> -->
+                <!-- <span>or use your account</span> -->
+                <div class="infield">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" name="email" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required/>
+                    <label></label>
+                </div>
+                <!-- <a href="#" class="forgot">Forgot your password?</a> -->
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p><b>Hoping you are having a great journey experience with our family support in adventuring a world of calm, peace and full of joy.</b></p>
+                    <button>Sign In</button>
+                </div>
+                
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p><b>Create an account and start a new journey with us .Connect to a world full of happiness,peace and adventure.</b></p>
+                    <button>Sign Up</button>
+                </div>
+                
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+    
+    
+    
+   
+    <script>
+        const container=document.getElementById('container');
+        const overlayCon=document.getElementById('overlayCon');
+        const overlayBtn=document.getElementById('overlayBtn');
+        overlayBtn.addEventListener('click',()=>{
+            container.classList.toggle('right-panel-active');
+            overlayBtn.classList.remove('btnScaled');
+            window.requestAnimationFrame( ()=>{
+                overlayBtn.classList.add('btnscaled');
+            })
+        });
+
+
+
+    </script>
+</body>
+</html>

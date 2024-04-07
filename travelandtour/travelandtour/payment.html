@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment.css">
+    <!-- Include necessary CSS files here -->
+</head>
+<style>
+    #pay {
+        max-width: 800px;
+        margin: 50px auto;
+        margin-top: 100px;
+        background-color: rgba(47, 39, 39, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+</style>
+
+<body>
+
+    <form id="pay">
+        <h1>Payment Gateway</h1>
+        <div>
+            <h2>Razorpay Payment</h2>
+            <button id="razorpayBtn">Pay with Razorpay</button>
+        </div>
+        <div>
+            <h2>UPI Payment</h2>
+            <button id="razorpayBtn">Pay with UPI</button>
+            <!-- UPI payment form -->
+        </div>
+        <div>
+            <h2>Debit Card Payment</h2>
+            <button id="razorpayBtn">Pay with Debit Card</button>
+            <!-- Debit card payment form -->
+        </div>
+        <div>
+            <h2>Credit Card Payment</h2>
+            <button id="razorpayBtn">Pay with Credit Card</button>
+            <!-- Credit card payment form -->
+        </div>
+        <div>
+            <h2>Bank Account Payment</h2>
+            <button id="razorpayBtn">Pay with Account</button>
+            <!-- Bank account payment form -->
+        </div>
+
+        <!-- Include necessary JavaScript files here -->
+        <script src="razorpay.js"></script>
+    </form>
+    <!-- This is where Razorpay integration will happen -->
+</body>
+
+</html>
